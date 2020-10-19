@@ -7,12 +7,7 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i = 0, min = 0, j = 0;
-	int swap = 0;
-
-	/* check if array is not NULL or empty */
-	if ((!array) || size == 0)
-		return;
+	size_t i, j, min, swap;
 
 	for (i = 0; i < size - 1; i++)
 	{
