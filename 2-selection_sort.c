@@ -10,6 +10,10 @@ void selection_sort(int *array, size_t size)
 	size_t i = 0, min = 0, j = 0;
 	int swap = 0;
 
+	/* check if array is not NULL or empty */
+	if ((!array) || size == 0)
+		return;
+
 	for (i = 0; i < size - 1; i++)
 	{
 		/*set current element as minimun */
@@ -30,6 +34,6 @@ void selection_sort(int *array, size_t size)
 			array[min] = array[i];
 			array[i] = swap;
 		}
-		/*print_array(array, size);*/
+		print_array(array, size);
 	}
 }
