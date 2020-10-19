@@ -31,7 +31,7 @@ void selection_sort(int *array, size_t size)
 			swap = array[min];
 			array[min] = array[i];
 			array[i] = swap;
+			print_array(array, size);
 		}
-		print_array(array, size);
 	}
 }
