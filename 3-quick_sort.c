@@ -24,7 +24,7 @@ void myswap(int *array, int firts, int second, int size)
 }
 
 /**
- * part - part to a pivot
+ * split - split to a pivot
  *
  * @array: data sort input
  * @left: left
@@ -33,7 +33,7 @@ void myswap(int *array, int firts, int second, int size)
  *
  * Return: New pivote
  */
-int part(int *array, int left, int right, size_t size)
+int split(int *array, int left, int right, size_t size)
 {
 	int i = left, j, pivot  = array[right];
 
@@ -65,7 +65,7 @@ void myquicksort(int *array, int left, int right, size_t size)
 
 	if (left < right)
 	{
-		pivote = part(array, left, right, size);
+		pivote = split(array, left, right, size);
 		myquicksort(array, left, pivote - 1, size);
 		myquicksort(array, pivote + 1, right, size);
 	}
