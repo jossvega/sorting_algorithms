@@ -33,6 +33,7 @@ void myswap(int *array, int firts, int second, int size)
  *
  * Return: New pivote
  */
+
 int split(int *array, int left, int right, size_t size)
 {
 	int i = left, j, pivot  = array[right];
